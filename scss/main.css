@@ -1,7 +1,6 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  line-height: 10px;
   font-family: 'Sintony', sans-serif;
 }
 
@@ -16,12 +15,35 @@
   border: 1px solid #746c75;
 }
 
+* a {
+  text-decoration: none;
+  color: inherit;
+}
+
+* #section1 {
+  background: #ebebeb;
+}
+
+* #section2 {
+  background: #dedede;
+}
+
+* #section3 {
+  background: #c4c4c4;
+}
+
+* #section4 {
+  background: #a8a8a8;
+}
+
 * .main nav {
   background-color: #f7f7f7;
   color: #363946;
-  font-family: sans-serif, Arial, Helvetica;
   position: fixed;
   top: 0;
+  width: 100%;
+  font-family: sans-serif, Arial, Helvetica;
+  z-index: 1;
 }
 
 * .main nav .navBar {
@@ -31,6 +53,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 5px 25px;
 }
 
 * .main nav .navBar div {
@@ -72,10 +95,34 @@
   transition: 0.4s;
 }
 
+* .main nav .navBar .navMenuExt {
+  background-color: #f7f7f7;
+  padding: 30px 50px 0 15px;
+  line-height: 3em;
+  height: 100vh;
+  width: 30vh;
+  position: absolute;
+  right: -2500px;
+  top: 0px;
+}
+
+* .main nav .navBar .navMenuExt p:first-child {
+  color: #363946;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+* .main nav .navBar .navMenuExt div {
+  border-bottom: 1px solid rgba(54, 57, 70, 0.3);
+}
+
+* .main nav .navBar .navMenuExt div:nth-child(2) {
+  border-bottom: 1px solid #363946;
+}
+
 * .main header {
   background-image: url("../images/tech1.jpg");
   /* Set a specific height */
-  height: 100vh;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -91,7 +138,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: auto 0;
+  padding: 74px 25px 30px 25px;
 }
 
 * .main header .mainHeader .headerContent {
@@ -143,6 +190,19 @@
   color: #363946;
 }
 
+* .main section #topics {
+  text-align: center;
+  font-size: 1.5em;
+  padding-top: 40px;
+  display: block;
+}
+
+* .main section #topics h1 {
+  display: inline-block;
+  padding: 5px 8px;
+  border-bottom: 2px solid rgba(54, 57, 70, 0.6);
+}
+
 * .main section .mainSection {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -151,15 +211,16 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 70px 25px;
+  padding: 40px 25px;
 }
 
 * .main section .mainSection .sectionCard {
   text-align: center;
-  padding: 20px 8px;
+  padding: 30px 8px;
   margin: 20px auto;
   -ms-flex-preferred-size: 80%;
       flex-basis: 80%;
+  position: relative;
   border-radius: 5px;
   -webkit-box-shadow: 0px 1px 3px 1px rgba(54, 57, 70, 0.5);
           box-shadow: 0px 1px 3px 1px rgba(54, 57, 70, 0.5);
@@ -168,23 +229,20 @@
 * .main section .mainSection .sectionCard .sectionCardBody img {
   height: 100px;
   width: 80px;
-  padding: 10px;
 }
 
 * .main section .mainSection .sectionCard .sectionCardBody h1 {
   font-weight: bold;
   font-size: 1.5em;
-  padding: 10px 0;
+  margin: 25px 0;
 }
 
 * .main section .mainSection .sectionCard .sectionCardBody p {
   font-style: italic;
   font-size: 1em;
-  padding: 10px 0;
-}
-
-* .main section .mainSection .sectionCard .sectionButton {
-  margin-top: 20px;
+  margin: 25px 0;
+  height: 130px;
+  display: none;
 }
 
 * .main section .mainSection .sectionCard .sectionButton a {
@@ -199,18 +257,24 @@
 }
 
 * .main section .mainSection1 {
-  padding: 70px 25px;
+  padding: 40px 25px;
 }
 
 * .main section .mainSection1 #speaker {
   text-align: center;
   font-size: 1.5em;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
+}
+
+* .main section .mainSection1 #speaker h1 {
+  display: inline-block;
+  padding: 5px 8px;
+  border-bottom: 2px solid rgba(54, 57, 70, 0.6);
 }
 
 * .main section .mainSection1 .section1Card {
   text-align: center;
-  padding: 20px 8px;
+  padding: 0px 8px;
   margin: auto;
 }
 
@@ -233,6 +297,7 @@
   font-style: italic;
   font-size: 1em;
   padding: 10px 0;
+  display: none;
 }
 
 * .main section .mainSection1 .section1Card .section1Button {
@@ -250,14 +315,42 @@
   border-radius: 3px;
 }
 
-* section .mainForm {
-  padding: 70px 25px;
+* section .mainMap {
+  padding: 40px 25px;
 }
 
-* section .mainForm h1 {
+* section .mainMap #touch {
   text-align: center;
   font-size: 1.5em;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
+}
+
+* section .mainMap #touch h1 {
+  display: inline-block;
+  padding: 5px 8px;
+  border-bottom: 2px solid rgba(54, 57, 70, 0.6);
+}
+
+* section .mainMap iframe {
+  width: 100%;
+  height: 450px;
+  border: 0;
+}
+
+* section .mainForm {
+  padding: 40px 25px;
+}
+
+* section .mainForm #message {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 40px;
+}
+
+* section .mainForm #message h1 {
+  display: inline-block;
+  padding: 5px 8px;
+  border-bottom: 2px solid rgba(54, 57, 70, 0.6);
 }
 
 * section .mainForm form label {
@@ -311,22 +404,6 @@
   width: 100%;
 }
 
-* section .mainMap {
-  padding-top: 70px;
-}
-
-* section .mainMap h1 {
-  text-align: center;
-  font-size: 1.5em;
-  margin-bottom: 80px;
-}
-
-* section .mainMap iframe {
-  width: 100%;
-  height: 450px;
-  border: 0;
-}
-
 * footer {
   background: #000;
   color: #ccc;
@@ -357,6 +434,12 @@
   margin: 3px;
 }
 
+@media (min-width: 321px) {
+  header .mainHeader {
+    padding: 144px 25px 100px 25px !important;
+  }
+}
+
 @media (min-width: 415px) {
   .wrapper {
     width: 80%;
@@ -377,18 +460,14 @@
 }
 
 @media (min-width: 768px) {
-  nav {
-    position: fixed;
-    width: 100%;
-  }
   nav .navLogo img {
-    height: 50px !important;
-  }
-  header {
-    margin-top: 64.2px;
+    height: 40px !important;
   }
   header .wrapper {
-    width: 50%;
+    width: 60%;
+  }
+  header .wrapper .mainHeader {
+    padding: 394px 25px 350px 25px !important;
   }
   section .mainSection {
     -webkit-box-orient: horizontal !important;
@@ -426,9 +505,21 @@
   nav .navMenu {
     display: none;
   }
+  header .wrapper {
+    width: 50%;
+  }
+  header .wrapper .mainHeader {
+    padding: 134px 25px 90px 25px !important;
+  }
   section .mainSection .sectionCard {
-    -ms-flex-preferred-size: 30% !important;
-        flex-basis: 30% !important;
+    -ms-flex-preferred-size: 23% !important;
+        flex-basis: 23% !important;
+  }
+  section .mainSection .sectionCard .sectionCardBody h1 {
+    height: 150px;
+  }
+  section .mainSection .sectionCard .sectionCardBody p {
+    display: none;
   }
 }
 
